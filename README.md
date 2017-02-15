@@ -1,6 +1,6 @@
 # easyssl
 An elasticsearch plugin adding ssl to both http(client-to-cluster) and transport(node-to-node) with several simple java files.
-It is free.
+It is simple, easy, and free.
 ##To install:
   plugin install https://github.com/elasticsearchssl/easyssl/blob/master/archive/2.4.4.zip?raw=true
 ##To configure:
