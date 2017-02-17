@@ -6,19 +6,19 @@ It is simple, easy, and free.
 ##To configure:
 * elasticsearch.yml:
   <pre>
-    #when this plug-in in play, https is enabled between client and elasticsearch cluster.
-    #to disable easyssl, you have to remove this plug-in.
-    #assuming your keystore contains key pair and certiface chains for this node, and trusted certificates of all nodes in the cluster.
-    #put your keystore in /concig directory of this node.
+    # When this plug-in in play, https is enabled between client and elasticsearch cluster.
+    # To disable easyssl, you have to remove this plug-in.
+    # Assuming your keystore contains key pair and certiface chains for this node, and trusted certificates of all nodes in the cluster.
+    # Put your keystore in /concig directory of this node.
+    # Replace the paswords with your own.
+    # Alias is optional. if not specified, the first key entry in the store is used.
+    # Default value of transport.ssl.enaled is true.
+    #
     easyssl:
       keystore.file: ${path.home}/config/keystore.jks
-      #replace with yours:
       keystore.password: easyssl
-      #replace with yours:
-      key.password: easyssl
-      #optional. if not specified, the first key entry in the store is used.
+      key.password: easyssl   
       #key.alias:
-      #add ssl to node-to-node communication. default is true.
       transport.ssl.enaled: true
  </pre>
 * To grant elasticsearch the access to call Security.getProperty("ssl.KeyManagerFactory.algorithm"), add the line below to /bin/elasticsearch.sh before JAVA_OPTS is referred:
