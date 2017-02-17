@@ -23,6 +23,5 @@ It is simple, easy, and free.
  </pre>
 * To grant elasticsearch the access to call Security.getProperty("ssl.KeyManagerFactory.algorithm"), add the line below to /bin/elasticsearch.sh before JAVA_OPTS is referred:
 <pre>
-  export JAVA_OPTS="${JAVA_OPTS} -Djava.security.policy=file://THE_PATH_TO_NODE_HOME/plugins/easyssl/elasticsearch-security.policy"
-  Replace "THE_PATH_TO_NODE_HOME" with the real path in your system.
+  export JAVA_OPTS="${JAVA_OPTS} -Djava.security.policy=file://${ES_HOME}/plugins/easyssl/elasticsearch-security.policy"
 </pre>
