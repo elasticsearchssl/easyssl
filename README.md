@@ -17,7 +17,7 @@ It is simple, easy, and free.
     easyssl:
       keystore.file: ${path.home}/config/keystore.jks
       keystore.password: easyssl
-      key.password: easyssl   
+      key.password: easyssl
       #key.alias:
       transport.ssl.enaled: true
  </pre>
