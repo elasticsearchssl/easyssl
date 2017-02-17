@@ -21,7 +21,7 @@ It is simple, easy, and free.
       #key.alias:
       transport.ssl.enaled: true
  </pre>
-* To grant elasticsearch the access to call Security.getProperty("ssl.KeyManagerFactory.algorithm"), add the line below to /bin/elasticsearch.sh before JAVA_OPTS is referred:
+* To grant elasticsearch the access to call Security.getProperty("ssl.KeyManagerFactory.algorithm"), add the line below to /bin/elasticsearch.sh after "export HOSTNAME":
 <pre>
   export JAVA_OPTS="${JAVA_OPTS} -Djava.security.policy=file://${ES_HOME}/plugins/easyssl/elasticsearch-security.policy"
 </pre>
